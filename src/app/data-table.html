@@ -1,0 +1,36 @@
+<table
+                class="table table-responsive table-hover borderless"
+                [mfData]="data"
+                #mf="mfDataTable"
+                [mfRowsOnPage]="6"
+              >
+                <thead>
+                  <tr style="color:deepskyblue">
+                    <th>
+                     COUNTRY
+                    </th>
+                    <th>TOTAL CONFIRMED</th>
+                    <th>
+                      TOTAL DEATHS
+                    </th>
+                    <th>
+                     TOTAL RECOVERED
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let covid of mf.data; let i = index" (click)="showPieChart(covid.Country, covid.TotalConfirmed, covid.TotalDeaths, covid.TotalRecovered)">
+                    <td>{{ covid.Country }}</td>
+                    <td>{{ covid.TotalConfirmed }}</td>
+                    <td>{{ covid.TotalDeaths }}</td>
+                    <td>{{ covid.TotalRecovered }}</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">
+                            <mfBootstrapPaginator ></mfBootstrapPaginator>
+                        </td>
+                    </tr>
+                </tfoot>
+              </table>
