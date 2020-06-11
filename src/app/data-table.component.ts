@@ -12,7 +12,7 @@ import { PieChartDataService } from './piechartdata.service';
 
 export class DataTableComponent {
     
-    private data;
+    data:any
 
     constructor(
         private appSettingsService: AppSettingsService,
