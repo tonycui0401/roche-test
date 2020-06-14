@@ -35,7 +35,6 @@ export class DataTableComponent {
     showPieChart(event: any, country, totalConfirmed, totalDeaths, totalRecovered){
         this.sendNotification(country);
         this.currentCountry = country;
-        console.log(this.currentCountry)
         let newData = [{
             label: 'TOTAL CONFIRMED',
             value: totalConfirmed,
