@@ -1,4 +1,4 @@
-<table
+            <table
                 class="table table-responsive table-hover borderless"
                 [mfData]="data"
                 #mf="mfDataTable"
@@ -19,7 +19,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let covid of mf.data; let i = index" (click)="showPieChart(covid.Country, covid.TotalConfirmed, covid.TotalDeaths, covid.TotalRecovered)">
+                  <tr *ngFor="let covid of mf.data; let i = index" (click)="showPieChart($event, covid.Country, covid.TotalConfirmed, covid.TotalDeaths, covid.TotalRecovered)" [class.highlighted]="covid.Country === currentCountry">
                     <td>{{ covid.Country }}</td>
                     <td>{{ covid.TotalConfirmed }}</td>
                     <td>{{ covid.TotalDeaths }}</td>

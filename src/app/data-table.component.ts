@@ -13,6 +13,7 @@ import { PieChartDataService } from './piechartdata.service';
 export class DataTableComponent {
     
     data:any
+    currentCountry:any
 
     constructor(
         private appSettingsService: AppSettingsService,
@@ -31,8 +32,10 @@ export class DataTableComponent {
           });
       }
 
-    showPieChart(country, totalConfirmed, totalDeaths, totalRecovered){
+    showPieChart(event: any, country, totalConfirmed, totalDeaths, totalRecovered){
         this.sendNotification(country);
+        this.currentCountry = country;
+        console.log(this.currentCountry)
         let newData = [{
             label: 'TOTAL CONFIRMED',
             value: totalConfirmed,

@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-// import { AppSettingsService } from "./data.service";
-// import { Type } from '@angular/compiler/src/core';
 import { PieChartDataService } from './piechartdata.service';
 
 
@@ -17,7 +15,6 @@ export class AppComponent {
   country = 'click the table row to see the chart'
 
   getNotification(country) {
-    // Do something with the notification (evt) sent by the child!
   this.country = country
 }
   

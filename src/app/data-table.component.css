@@ -5,3 +5,7 @@ table thead tr {
 th {
     font-size:8pt;
 }
+
+.highlighted {
+    background: #e8fcff;
+}
